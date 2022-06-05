@@ -41,8 +41,8 @@ function App() {
 
   return (
     <div className="App">
-      <header className="App-Header">
-        <h1>Hangman</h1>
+      <header className="app-header">
+        <h1 className="title">Hangman</h1>
       </header>
       <main className="main">
         <Display
