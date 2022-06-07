@@ -51,6 +51,7 @@ function App() {
           source={source}
           setDisabled={setDisabled}
           resetGame={resetGame}
+          word={word}
         />
         <Keyboard
           newChar={newChar}

@@ -1,13 +1,16 @@
 @import url('https://fonts.googleapis.com/css2?family=Mukta&family=Permanent+Marker&display=swap');
 
+* { box-sizing: border-box;
+    margin: 0;
+    padding: 0; 
+  }
+
 .App {
   font-family: 'Permanent Marker', cursive;
   font-size: x-large;
   text-align: center;
   height: 100%;
   width: 100%;
-  margin: 0;
-  padding: 0;
   position: absolute;
   background-color: #16161a;
   color: #fffffe;
@@ -15,35 +18,66 @@
   vertical-align: top;
 }
 
-.app-header{
-  top: 0;
-  padding: 0;
-  margin: 0;
-}
-
 .title{
   z-index: 100;
   position: relative;
-  padding: 0;
-  margin: 0;
+  height: 10%;
 }
 
 .main {
   background-color: #16161a;
   position: absolute;
-  height: 80%;
-  top: 5%;
-  right: 0px;
-  bottom: 0px;
-  left: 0px;
-  z-index: 10;
+  height: 90%;
+  width: 94%;
+  margin-left: 3%;
+  margin-right: 3%
 }
 
-* { box-sizing:border-box; }
+.display{
+  height: 5rem;
+  background:#72757e;
+  padding-right: 3%;
+  padding-left: 3%;
+  border-radius:10px;
+  border-bottom:6px solid #94a1b2;
+  display:-webkit-flex;
+  min-height: 60%;
+  margin-bottom: 3%;
+  grid-template-columns: auto auto;
+  align-items: center;
+  width: auto;
+}
+
+.hangman{
+  height: 17rem;
+  width: auto;
+  position: realtive;
+  align-items: center;
+}
+
+.incorrect{
+  margin-bottom: 3%;
+  height: 15%;
+}
+
+.letters{
+  background:#72757e;
+  padding: 1%;
+  border-radius:10px;
+  border-bottom:6px solid #94a1b2;
+  display:-webkit-flex;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  height: 100%;
+  align-items: center;
+}
+
+.letter-box{
+  display:-webkit-flex;
+}
 
 .keyboard {
-  margin: 2%;
-  width: 95%;
   background:#72757e;
   padding: 2%;
   border-radius:10px;
@@ -89,53 +123,8 @@
   box-shadow:0 1px 0 #222, inset 0 1px 3px rgba(255,255,255,0.1);
   cursor:pointer;
   width: 40%;
+  margin-bottom: 3%;
 }
-
-.display{
-  margin: 5% auto;
-  width: 95%;
-  height: 60%;
-  background:#72757e;
-  padding-right: 1%;
-  padding-left: 1%;
-  border-radius:10px;
-  border-bottom:6px solid #94a1b2;
-  display:-webkit-flex;
-  min-height: 70%;
-}
-
-.hangman{
-  height: 70%;
-  width: auto;
-  position: realtive;
-}
-
-.incorrect{
-  height: 20%;
-  padding: 2%
-}
-
-.letters{
-  background:#72757e;
-  padding: 1%;
-  border-radius:10px;
-  border-bottom:6px solid #94a1b2;
-  display:-webkit-flex;
-  white-space: nowrap;
-  overflow: hidden;
-  text-overflow: ellipsis;
-  height: 100%;
-}
-
-.letter-box{
-  display:-webkit-flex;
-  position: relative;
-}
-
-.wrong-letters{
-  margin-top: 15%;
-}
-
 
 .keyboard-button:active { transform:translateY(1px); background:#333; box-shadow:0 1px 0 #000;}
 .gameover-button:active { transform:translateY(1px); background:#333; box-shadow:0 1px 0 #000;}
